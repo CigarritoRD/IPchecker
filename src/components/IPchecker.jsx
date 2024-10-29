@@ -10,7 +10,7 @@ const IPChecker = () => {
     const [fileUploaded, setFileUploaded] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
     const [error, setError] = useState(null);
-
+    const apiUrl = import.meta.env.VITE_API_URL;
     // Toggle between light and dark mode
     useEffect(() => {
         if (darkMode) {
@@ -40,7 +40,7 @@ const IPChecker = () => {
         formData.append('file', file);
 
         try {
-            const response = await axios.post(process.env.VITE_API_URL, formData, {
+            const response = await axios.post(apiUrl, formData, {
                 responseType: 'blob',
                 onUploadProgress: (progressEvent) => {
                     const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
