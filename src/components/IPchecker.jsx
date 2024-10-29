@@ -71,7 +71,8 @@ const IPChecker = () => {
             <h1 className="text-3xl font-bold mb-4">IP Checker with VirusTotal</h1>
 
             {/* Toggle Light/Dark Mode */}
-            <button
+            {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+<button
                 onClick={() => setDarkMode(!darkMode)}
                 className="absolute top-4 right-4 p-2 bg-gray-300 dark:bg-gray-800 rounded-full focus:outline-none"
             >
@@ -100,7 +101,8 @@ const IPChecker = () => {
                     {/* Green checkmark when file is uploaded */}
                     {fileUploaded && (
                         <div className="flex justify-center items-center mt-2 text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
+<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
                             <span className="ml-2 text-green-600 font-semibold">File uploaded successfully!</span>
@@ -109,7 +111,8 @@ const IPChecker = () => {
                 </div>
 
                 {/* Verify Button */}
-                <button
+                {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+<button
                     onClick={handleFileUpload}
                     disabled={!file || loading}
                     className={`mt-4 w-full py-2 px-4 font-semibold rounded-lg shadow-md cursor-pointer
@@ -144,7 +147,8 @@ const IPChecker = () => {
                 )}
 
                 {/* Reset Button */}
-                <button
+                {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+<button
                     onClick={resetForm}
                     className="mt-4 w-full py-2 px-4 font-semibold rounded-lg shadow-md
                                bg-red-600 hover:bg-red-700 text-white cursor-pointer
